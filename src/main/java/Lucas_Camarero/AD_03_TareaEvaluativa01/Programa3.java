@@ -71,7 +71,7 @@ public class Programa3 {
 				
 			// se muestra en consola el listado de eventos
 			st.close();
-			st = c.prepareStatement("SELECT E.NOMBRE_EVENTO, U.CAPACIDAD, COUNT(*) FROM eventos E INNER JOIN "
+			st = c.prepareStatement("SELECT E.NOMBRE_EVENTO, U.CAPACIDAD, COUNT(*) FROM EVENTOS E INNER JOIN "
 					+ "ASISTENTES_EVENTOS A ON E.ID_EVENTO = A.ID_EVENTO "
 					+ "INNER JOIN UBICACIONES U ON E.ID_UBICACION = U.ID_UBICACION "
 					+ "GROUP BY E.NOMBRE_EVENTO, U.CAPACIDAD;");
